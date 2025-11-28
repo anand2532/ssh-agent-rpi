@@ -7,7 +7,7 @@
 export RPI_HOST="192.168.1.8"  # RPi IP address
 
 # RPi username (usually "pi" or your username)
-export RPI_USER="pi"  # Change this to your RPi username
+export RPI_USER="lazy-learn"  # RPi username
 
 # SSH port (default is 22)
 export RPI_PORT="22"
