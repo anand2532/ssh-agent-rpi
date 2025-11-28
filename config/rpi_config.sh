@@ -4,7 +4,7 @@
 
 # RPi IP address or hostname
 # Find it with: hostname -I (on RPi) or check your router's DHCP table
-export RPI_HOST="raspberrypi.local"  # Change this to your RPi's IP (e.g., "192.168.1.100")
+export RPI_HOST="192.168.1.8"  # RPi IP address
 
 # RPi username (usually "pi" or your username)
 export RPI_USER="pi"  # Change this to your RPi username

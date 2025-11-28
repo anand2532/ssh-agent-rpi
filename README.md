@@ -24,15 +24,28 @@ Edit `config/rpi_config.sh` and set:
 
 ### 3. Set up SSH key authentication (recommended)
 
-Run the setup script:
+**Option A: Automated setup (requires password input)**
 ```bash
 ./setup_ssh_keys.sh
 ```
 
-This will:
-- Generate an SSH key if you don't have one
-- Copy your public key to the RPi
-- Enable passwordless SSH access
+**Option B: Manual setup (if automated fails)**
+
+1. Display your public key:
+```bash
+./show_public_key.sh
+```
+
+2. On your RPi, add the public key:
+```bash
+mkdir -p ~/.ssh
+# Copy the public key from show_public_key.sh output and add it:
+echo 'YOUR_PUBLIC_KEY_HERE' >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
+This enables passwordless SSH access.
 
 ### 4. Test the connection
 
@@ -58,5 +71,6 @@ Example:
 
 - `config/rpi_config.sh` - RPi connection configuration
 - `rpi_exec.sh` - Script to execute commands on RPi
-- `setup_ssh_keys.sh` - Script to set up SSH key authentication
+- `setup_ssh_keys.sh` - Script to set up SSH key authentication (automated)
+- `show_public_key.sh` - Display SSH public key for manual setup
 
