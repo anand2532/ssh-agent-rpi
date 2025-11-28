@@ -1,0 +1,4 @@
+# Ignore config file with potentially sensitive info
+# (uncomment if you want to ignore it)
+# config/rpi_config.sh
+
